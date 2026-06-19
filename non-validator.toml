@@ -1,0 +1,75 @@
+engine_api_url = "http://plasma-execution:8551"
+consensus_api_host = "0.0.0.0"
+authrpc_jwtsecret = "/jwt/jwt.hex"
+
+[persistence]
+data_dir = "/consensus"
+
+[network]
+interval = 5
+p2p_port = 34070
+timeout = 5
+identity_file_path = "/consensus/ec-secp256k1-non-validator.der"
+trusted_only = false
+discovery.enabled = true
+
+[api]
+enabled = true
+host = "0.0.0.0"
+port = 35070
+
+[validators]
+[validators.0]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-0.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-0.hex"
+
+[validators.1]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-1.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-1.hex"
+
+[validators.2]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-2.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-2.hex"
+
+[validators.3]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-3.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-3.hex"
+
+[validators.4]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-4.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-4.hex"
+
+[validators.5]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-5.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-5.hex"
+
+[validators.6]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-6.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-6.hex"
+
+[validators.7]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-7.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-7.hex"
+
+[validators.8]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-8.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-8.hex"
+
+[validators.9]
+validator_keystore_pk_file_path = "/node/keys/bls12-381-public-key-9.hex"
+identity_file_path = "/node/identities/ec-secp256k1-validator-public-compressed-9.hex"
+
+[network.bootstrap_nodes.0]
+api_host = "plasma-mainnet-observer-cs-1.plasmalabs.tech"
+p2p_port = 34070
+peer_id = "16Uiu2HAm4WdZmik6PVsRvcbCzc1eHuNfQHgj52CxUAjmdC7W5dXi"
+
+[network.bootstrap_nodes.1]
+api_host = "plasma-mainnet-observer-cs-4.plasmalabs.tech"
+p2p_port = 34070
+peer_id = "16Uiu2HAmGmnMycTkjnMoxcyVAF8cUFpVoVKKCAGTpwEBJMs181yM"
+
+[network.bootstrap_nodes.2]
+api_host = "plasma-mainnet-observer-cs-9.plasmalabs.tech"
+p2p_port = 34070
+peer_id = "16Uiu2HAm2PVfZRoyXXLASVzVX3gyBEQd3mRAzZytjv3esD9kWumD"
