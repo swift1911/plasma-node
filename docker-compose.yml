@@ -18,7 +18,7 @@ services:
           echo 'secp256k1 keypair for non-validator already exists'
         fi
         echo 'OpenSSL initialization completed'
-    user: "1000:1000"
+    user: "${UID}"
     env_file: .env
     container_name: openssl-init
     volumes:
@@ -27,7 +27,7 @@ services:
 
   init-consensus:
     image: ${PLASMA_CONSENSUS_IMAGE}:${PLASMA_CONSENSUS_TAG}
-    user: "1000:1000"
+    user: "${UID}"
     entrypoint: ["/bin/bash", "-c"]
     command:
       - |
@@ -58,7 +58,7 @@ services:
 
   init-execution:
     image: ${PLASMA_EXECUTION_IMAGE}:${PLASMA_EXECUTION_TAG}
-    user: "1000:1000"
+    user: "${UID}"
     entrypoint: ["/bin/bash", "-c"]
     command:
       - |
@@ -83,7 +83,7 @@ services:
 
   plasma-execution:
     image: ${PLASMA_EXECUTION_IMAGE}:${PLASMA_EXECUTION_TAG}
-    user: "1000:1000"
+    user: "${UID}"
     entrypoint: ["/bin/bash", "-c"]
     command:
       - |
@@ -142,7 +142,7 @@ services:
 
   plasma-consensus:
     image: ${PLASMA_CONSENSUS_IMAGE}:${PLASMA_CONSENSUS_TAG}
-    user: "1000:1000"
+    user: "${UID}"
     entrypoint: ["/bin/bash", "-c"]
     command:
       - |
